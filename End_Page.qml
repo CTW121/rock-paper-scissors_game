@@ -18,7 +18,15 @@ Item {
         color: "white"
         font.bold: true
         font.pointSize: 25
-        text: "Good Game!!"
+        text: "Good Game!!!"
+    }
+
+    Image{
+        anchors.centerIn: parent
+        width: 200
+        height: 200
+        antialiasing: true
+        source: "qrc:/Images/winImg.png"
     }
 
     Label{

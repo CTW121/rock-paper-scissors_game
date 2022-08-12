@@ -4,6 +4,16 @@ import QtQuick.Controls 2.15
 Item {
     //anchors.fill: parent
 
+    Label{
+        anchors.top: parent.top
+        anchors.topMargin: 100
+        anchors.horizontalCenter: parent.horizontalCenter
+        color: "white"
+        font.bold: true
+        font.pointSize: 15
+        text: "Click the Icon..."
+    }
+
     MouseArea{
         anchors.centerIn: parent
         width: 100

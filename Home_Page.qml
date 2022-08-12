@@ -42,6 +42,7 @@ Item {
 
         Label{
             anchors.bottom: parent.bottom
+            anchors.bottomMargin: 20
             anchors.horizontalCenter: parent.horizontalCenter
             color: "white"
             font.bold: true
