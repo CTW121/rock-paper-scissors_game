@@ -36,15 +36,15 @@ Item {
         model: ListModel{
             id: optionModel
             ListElement{
-                img: "qrc:/rockImg.png"
+                img: "qrc:/Images/rockImg.png"
                 value: "rock"
             }
             ListElement{
-                img: "qrc:/paperImg.png"
+                img: "qrc:/Images/paperImg.png"
                 value: "paper"
             }
             ListElement{
-                img: "qrc:/scissorImg.png"
+                img: "qrc:/Images/scissorImg.png"
                 value: "scissor"
             }
         }

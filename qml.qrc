@@ -6,11 +6,13 @@
         <file>End_Page.qml</file>
         <file>Player_Phase.qml</file>
         <file>Result_Phase.qml</file>
+    </qresource>
+    <qresource prefix="/Images">
         <file>drawImg.png</file>
         <file>losImg.png</file>
         <file>paperImg.png</file>
         <file>rockImg.png</file>
-        <file>scissorImg.png</file>
         <file>winImg.png</file>
-    </qresource>
+        <file>scissorImg.png</file>
+     </qresource>
 </RCC>

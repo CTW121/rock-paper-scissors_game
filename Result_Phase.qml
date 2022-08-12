@@ -19,9 +19,9 @@ Item {
         Image{
             anchors.fill: parent
             antialiasing: true
-            source: if(winState===0) {"qrc:/drawImg.png"}
-                    else if(winState===1) {"qrc:/winImg.png"}
-                    else if(winState===2) {"qrc:/losImg.png"}
+            source: if(winState===0) {"qrc:/Images/drawImg.png"}
+                    else if(winState===1) {"qrc:/Images/winImg.png"}
+                    else if(winState===2) {"qrc:/Images/losImg.png"}
             onSourceChanged: {
                 resultTimer.start()
             }
