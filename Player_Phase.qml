@@ -1,8 +1,15 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtQuick.LocalStorage 2.15
+import "Database.js" as LocalStorage
 
 Item {
     //anchors.fill: parent
+
+    Component.onCompleted: {
+        //LocalStorage_Settings.dbInit()
+        LocalStorage.dbInit()
+    }
 
     MouseArea {
         anchors.centerIn: parent
@@ -82,7 +89,7 @@ Item {
         }
         else if(playerOption === "rock" && botOption.value === "scissor") {
             // player win
-            winCounr++
+            winCount++
             winState = 1
         }
         else if(playerOption === "paper" && botOption.value === "scissor") {
@@ -113,5 +120,7 @@ Item {
         console.log(winState)
         gameFrame.setCurrentIndex(1)
         // upload to local storage
+        LocalStorage.dbUpdate("playerWin", winCount)
+        LocalStorage.dbSet("playerLos", losCount)
     }
 }

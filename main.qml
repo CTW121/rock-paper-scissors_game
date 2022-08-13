@@ -1,5 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtQuick.LocalStorage 2.15
+import "Database.js" as LocalStoroge
 
 ApplicationWindow {
     width: 360
@@ -10,6 +12,9 @@ ApplicationWindow {
     property var winCount: 0
     property var losCount: 0
     property var winState: 0 //0=draw 1=player Win 2=player los
+
+    //property var winCount: LocalStorage.dbGet("playerWin")
+    //property var losCount: LocalStorage.dbGet("playerLos")
 
     SwipeView{
         id: swipeView
@@ -28,5 +33,10 @@ ApplicationWindow {
         End_Page{       // Index: 2
             id: end_Page
         }
+    }
+
+    Component.onCompleted: {
+        //LocalStorage_Settings.dbInit()
+        LocalStorage.dbInit()
     }
 }
